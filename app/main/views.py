@@ -1,7 +1,7 @@
 from flask import render_template,request,redirect,url_for
 from . import main
-from ..requests import get_source, get_articles
-from ..models import Source, Articles
+from ..requests import get_sources, get_articles
+from ..models import Sources, Articles
 
 
 @main.route('/')
@@ -10,19 +10,17 @@ def index():
     View root page function that returns the index page and its data
     '''
     #Getting source of news
-    newsSource = get_source()
+    news_sources = get_sources()
     title = 'Home - News Sources'
-    print(newsSource)
+    return render_template('index.html', title=title, sources = news_sources )
 
-    return render_template('index.html', title = title, source = newsSource )
+@main.route('/article/<id>')
+def article(id):
 
-@main.route('/artcle/<string:id>')
-def source(id):
-        '''
-        View source page function that shows source and details
-        '''
-        articles = get_articles(id)
-        print(articles)
-        return render_template('articles.html', articles = articles )
+    '''
+    View movie page function that returns the movie details page and its data
+    '''
+    article = get_articles(id)
 
+    return render_template('articles.html', article = article)
 

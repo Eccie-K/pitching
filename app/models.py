@@ -1,4 +1,4 @@
-class Source:
+class Sources:
     '''
     News class to define News sources Objects
     '''
