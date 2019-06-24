@@ -36,3 +36,4 @@ Mobile:+254775946131<br>
 Email:estherkc100@gmail.com<br>
 
 <h2>License and Copyright Information</h2>
+https://github.com/Eccie-K/news/blob/master/LICENSE.md
