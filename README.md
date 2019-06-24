@@ -7,18 +7,19 @@ An application that allows users to view news highlights from various news sourc
 Esther
 
 <h2>Technology Used</h2>
-- Python Flask mini framework
-- Git version control
-- Heroku: host live site
+- Python Flask mini framework<br>
+- Git version control<br>
+- Heroku: host live site<br>
 - Git: version control
 
 <h2>Behaviour Driven Development (BDD)</h2>
-- Users can view various sources of news and select on which they want to read by clicking on it
-- Users can click on a news source and view the top news article from that specific news source
-- Users can see the image description and the time the news was created
-- Users can click on an article and read it fully from the news source
+- Users can view various sources of news and select on which they want to read by clicking on it<br>
+- Users can click on a news source and view the top news article from that specific news source<br>
+- Users can see the image description and the time the news was created<br>
+- Users can click on an article and read it fully from the news source<br>
 
 <h2>Set Up Instructions and Requirements</h2>
+
 
 <h2>Contributions</h2>
 Contributions are welcome. It is recommended that you open an issue and discuss
