@@ -19,7 +19,12 @@ Esther
 - Users can click on an article and read it fully from the news source<br>
 
 <h2>Set Up Instructions and Requirements</h2>
-
+- Clone this repository to your local computer.<br>
+- Ensure you have python3.6 installed in your computer.<br>
+- From the terminal navigate to the cloned project folder.<br>
+- Create a virtual environment and access the folder within the virtual environment.<br>
+- Create start.sh file and in it write the following lines:<br>
+- Run ./start.sh while in the project folder to start the project.
 
 <h2>Contributions</h2>
 Contributions are welcome. It is recommended that you open an issue and discuss
