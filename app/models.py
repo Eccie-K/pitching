@@ -1,15 +1,15 @@
-class Sources:
+class User:
     '''
     News class to define News sources Objects
     '''
 
-    def __init__(self, id, name, description):
+    def __init__(self, id, content, author):
         self.id = id
-        self.name = name
-        self.description = description
+        self.content = content
+        self.author = author
 
 
-class Articles:
+class Pitch:
     '''
     Headlines to define News articles class
     '''

@@ -8,7 +8,7 @@
     {% if title %}
     <title> {{ title }}</title>
     {% else %}
-    <title> News Sources </title>
+    <title> Pitches </title>
     {% endif %}
 
 </head>
@@ -22,28 +22,39 @@
     {% endblock %}
 
     {% block content %}
-    <!-- News Highlight -->
+    <!-- Pitches -->
      <br>
 
-    <!-- News Highlight -->
-    <h1 align="center"> SOURCES</h1>
+    <!--Pitches -->
+    <h1 align="center"> PITCHES</h1>
     <br>
-    <ul>
+    <div class="container">
+            <div class="row">
+                <div class ="col-g-8 col-md-10 mx-auto">
+                    <form name="AddForm" id="AddForm" method="POST" action="{{(addpost)}}"  novalidate>
+                        <label>Title</label>
+                        <input type="text" class="form-control" placeholder="Title" name="title" id="title">
+                        <br>
+                        <br>
+                        <label>Content</label>
+                        <textarea rows="5" class="form-control" placeholder="content" name="content" id="content"></textarea>
+                        <br>
+                        <br>
+                        <label>Author</label>
+                        <input type="text" class="form-control" placeholder="Author" name="author" id="author">
+                        <br>
+                        <br>
+                        <div id="success"></div>
+                         <div class = "form">
+                             <button type="submit" class="btn btn-secondary" id="post content" >Post</button>
 
-        <div class="card mb-3">
-            {% for source in sources %}
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-">
-                <p class="text-center">
-                    <a href="/articles/{{source.id}}">{{source.name}}</a>
-                </p>
-                <p class="text-center">{{ source.description|truncate(40)}}</p>
-                <a href="/article/{{source.id}}" class="btn btn-info" role="button">Read Article</a>
-               
+                         </div>
+                    </form>
+                </div>
+                
             </div>
+    
         </div>
-
-        {% endfor %}
-    </ul>
 
 
 </body>

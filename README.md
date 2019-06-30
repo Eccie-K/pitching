@@ -13,10 +13,10 @@ Esther Kirui
 - Git: version control
 
 <h2>Behaviour Driven Development (BDD)</h2>
-- Users can view various sources of news and select on which they want to read by clicking on it<br>
-- Users can click on a news source and view the top news article from that specific news source<br>
-- Users can see the image description and the time the news was created<br>
-- Users can click on an article and read it fully from the news source<br>
+- Users can view various pitches  and vote on th pitch they liked by giving it an upvote or down vote<br>
+- Users can post pitches and view them on their profiles<br>
+- Users can give a review of a pitch<br>
+
 
 <h2>Set Up Instructions and Requirements</h2>
 - Clone this repository to your local computer.<br>
