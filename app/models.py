@@ -15,7 +15,6 @@ class User (UserMixin,db.Model):
     username = db.Column(db.String(255),index = True)
     role_id = db.Column(db.Integer,db.ForeignKey('pitches.id'))
     email = db.Column(db.String(255),unique = True,index = True)
-
     bio = db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
     password_hash = db.Column(db.String(255))
