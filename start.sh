@@ -1,4 +1,5 @@
-export NEWS_API_KEY='8042f30000994df78898ee8fafe63983'
-export SECRET_KEY='228632ab0cf8dfca'
+export SECRET_KEY='esther'
+export DATABASE_URL='postgresql+psycopg2://esther:esther@localhost/pitches'
+
 
 python3.6 manage.py server
