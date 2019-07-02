@@ -1,46 +1,33 @@
 {% extends 'base.html'%}
 {% import 'macros.html' as macro%}
+{% import "bootstrap/wtf.html" as wtf %}
 
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    {% if title %}
-    <title> {{ title }}</title>
-    {% else %}
-    <title> Pitches</title>
-    {% endif %}
-
-</head>
-
-<body>
-    {% block styles%}
-    {{ super() }}
-    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/styles.css')}}">
-    {% endblock %}
-    <!-- Content block -->
-    {% block content %}
-    <div class="container">
-            <div class ="jumbotron">
-                <h3>Your pitch</h3>
-                <div class="title"><h2>{{title}} </h2>  
-                </div>
-                <div class="content"><h3>{{content}}</h3>
-                </div>
-                <div class="author">{{author}}</div>
+        
+        
+        
+        {% block content %}
+        <div class="container">
+            <div class="row">
+                <p>{{pitch.pitch_content}}</p>
+                <span>
+                <p>Posted on {{date}} by {{pitch.user.username| capitalize}}</p>
+                <a href="/pitch/{{pitch.id}}?upvote=1">
+                <i class="material-icons"></i>
+                    <i class="material-icons">Up_Vote</i>
+                </a>{{pitch.upvotes}} <a href="/pitch/{{pitch.id}}?downvote=1">
+                    <i class="material-icons">Down_Vote</i>
+                </a>{{pitch.downvotes}}</span>
+                 <a class="ratings" href="/pitch/new/"> Add a new pitch</a>
             </div>
-    
+            <div class="row">
+                <hr>
+                {% if current_user.is_authenticated %}
+                    {{ wtf.quick_form(comment_form) }}
+                {% endif %}
+                <h3>Comments</h4>
+                {{macro.displayComments(comments)}}
+            </div>
         </div>
-   
-
-
-                {% endfor %}
-            
-        </div>
-    </div>
-
-    {% endblock %}
-</body>
-
-</html>
+        {% endblock %}
