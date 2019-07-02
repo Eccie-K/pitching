@@ -13,7 +13,7 @@ Esther Kirui
 - Git: version control
 
 <h2>Behaviour Driven Development (BDD)</h2>
-- Users can view the pitches on the index page of the application.
+- Users can view the pitches on the index page of the application.<br>
 - Users can view various pitches  and vote on the pitch they liked by giving it an upvote or down vote<br>
 - Users can post pitches and view them on their profiles<br>
 - Users can comment on a pitch<br>
