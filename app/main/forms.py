@@ -8,7 +8,7 @@ class PitchForm(FlaskForm):
     content = TextAreaField('write pitch', validators=[Required()])
     submit = SubmitField('Submit')
 
-class AddPitch(FlaskForm):
+class UpdateProfile(FlaskForm):
     
-    post = TextAreaField('Enter your pitch',validators = [Required()])
+    post = TextAreaField('Say something about yourself',validators = [Required()])
     submit = SubmitField('Submit')

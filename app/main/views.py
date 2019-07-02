@@ -1,8 +1,8 @@
 from flask import render_template,request,redirect,url_for,abort
 from . import main
 from ..models import User, Pitch
-from flask_login import login_required
-from .forms import PitchForm, AddPitch
+from flask_login import login_required, current_user
+from .forms import PitchForm, UpdateProfile
 from .. import db,photos
 
 
@@ -24,11 +24,12 @@ def profile(uname):
 @main.route('/user/<uname>/update',methods = ['GET','POST'])
 @login_required
 def update_profile(uname):
+    
     user = User.query.filter_by(username = uname).first()
     if user is None:
         abort(404)
 
-    form = AddPitch()
+    form = UpdateProfile()
 
     if form.validate_on_submit():
         user.post = form.post.data
